@@ -13,10 +13,6 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-
-  //   > div:nth-child(even) > .project {
-  //     border-radius: 2rem 0;
-  //   }
 }
 
 .project {
@@ -36,4 +32,15 @@
 
 .carouselWrapper {
   margin-top: 20%;
+}
+
+@media (min-width: 670px) {
+  .projects {
+    padding: 4rem;
+  }
+
+  .projectsWrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
 }

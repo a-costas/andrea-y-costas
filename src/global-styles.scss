@@ -67,13 +67,15 @@ h6 {
 html {
   color-scheme: light;
 
-  --color-primary-font: white;
-  --color-secondary-font: black;
+  --color-primary-font: hsl(0, 0%, 100%);
+  --color-secondary-font: hsl(0, 0%, 0%);
+  --color-tertiary-font: hsl(0, 0%, 50%);
 
-  --color-primary-background: white;
-  --color-secondary-background: black;
+  --color-primary-background: hsl(0, 0%, 100%);
+  --color-secondary-background: hsl(0, 0%, 0%);
+  --color-card-background: hsl(0, 0%, 10%);
 
-  --color-primary-button: black;
+  --color-primary-button: hsl(0, 0%, 0%);
 
   --ham-bar-width: 1.5rem;
   --ham-bar-height: 0.125rem;
@@ -83,4 +85,23 @@ html {
   --x-width: calc(var(--ham-height) * 1.41421356237);
 
   --animation-timing: 200ms ease-in-out;
+}
+
+section {
+  padding: 2rem;
+}
+
+.title {
+  margin-bottom: 2rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--color-primary-font);
+}
+
+@media (min-width: 670px) {
+  .title {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+  }
 }

@@ -15,6 +15,9 @@
   height: 100vh;
   padding: 2rem;
 
+  font-family: "Raleway", sans-serif;
+  color: var(--color-primary-font);
+
   display: flex;
   flex-direction: column;
 }
@@ -39,4 +42,48 @@ footer {
   margin-top: auto;
   align-self: center;
   //   justify-: flex-end;
+}
+
+@media (min-width: 670px) {
+  .contact {
+    //   background: linear-gradient(rgba(0, 0, 0, 60%), rgba(0, 0, 0, 60%)),
+    //     url("../../assets/images/mobile/clay-banks-gotg-unsplash.jpg");
+    background: linear-gradient(
+        180deg,
+        rgb(0, 0, 0) 0%,
+        rgba(255, 255, 255, 0) 20%
+      ),
+      linear-gradient(rgba(0, 0, 0, 60%), rgba(0, 0, 0, 30%)),
+      linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 30%),
+      url("../../assets/images/desktop/colin-lloyd-sanddunes-unsplash.jpg");
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    height: auto;
+
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .contactIcons {
+    margin: 5rem;
+    gap: 7rem;
+  }
+
+  .contactIcon {
+    height: 5.5rem;
+    width: auto;
+  }
+
+  footer {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
 }

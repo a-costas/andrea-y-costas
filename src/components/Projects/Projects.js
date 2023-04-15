@@ -3,6 +3,8 @@ import React from "react";
 
 import "./Projects.scss";
 
+import Project from "../Project/Project";
+
 import loopstudios from "../../assets/images/mobile/Loopstudios.png";
 import wnews from "../../assets/images/mobile/W_news.png";
 import pod from "../../assets/images/mobile/pod.png";
@@ -13,42 +15,38 @@ function Projects() {
     <section className="projects">
       <h2 className="title">Projects</h2>
       <div className="projectsWrapper">
-        <div>
-          <img className="project" src={wnews} alt="W news site" />
-          <h3 className="siteCaption">W news</h3>
-          <p className="siteSummary">
-            A tech news website landing page created following Figma mocks as
-            part of a Frontend Mentor challenge.
-          </p>
-        </div>
-        <div>
-          <img className="project" src={loopstudios} alt="Loopstudios" />
-          <h3 className="siteCaption">Loopstudios</h3>
-          <p className="siteSummary">
-            A VR immersive experiences website landing page created following
-            Figma mocks as part of a Frontend Mentor challenge.
-          </p>
-        </div>
-        <div>
-          <img className="project" src={pod} alt="Pod podcast" />
-          <h3 className="siteCaption">Podcast</h3>
-          <p className="siteSummary">
-            A podcast announcement page created following Figma mocks as part of
-            a Frontend Mentor challenge.
-          </p>
-        </div>
-        <div>
-          <img
-            className="project"
-            src={productPreview}
-            alt="Product preview sample"
-          />
-          <h3 className="siteCaption">Product preview modal</h3>
-          <p className="siteSummary">
-            A product preview modal for a perfume following Figma mocks as part
-            of a Frontend Mentor challenge.
-          </p>
-        </div>
+        <Project
+          image={wnews}
+          title="W news"
+          technologies={["React", "HTML5", "CSS3", "JavaScript"]}
+        >
+          A tech news website landing page created following Figma mocks as part
+          of a Frontend Mentor challenge.
+        </Project>
+        <Project
+          image={loopstudios}
+          title="Loopstudios"
+          technologies={["React", "HTML5", "CSS3", "JavaScript"]}
+        >
+          A VR immersive experiences website landing page created following
+          Figma mocks as part of a Frontend Mentor challenge.
+        </Project>
+        <Project
+          image={pod}
+          title="Podcast Launch"
+          technologies={["HTML5", "CSS3", "JavaScript"]}
+        >
+          A podcast announcement page created following Figma mocks as part of a
+          Frontend Mentor challenge.
+        </Project>
+        <Project
+          image={productPreview}
+          title="Product Preview Component"
+          technologies={["HTML5", "CSS3"]}
+        >
+          A product preview modal for a perfume following Figma mocks as part of
+          a Frontend Mentor challenge.
+        </Project>
       </div>
       {/* <div className="carouselWrapper">
         <MyCarousel />
