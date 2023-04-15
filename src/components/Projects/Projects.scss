@@ -1,0 +1,39 @@
+.projects {
+  padding: 2em;
+  padding-bottom: 4rem;
+  //   padding-top: 5rem;
+  background-color: var(--color-secondary-background);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.projectsWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  //   > div:nth-child(even) > .project {
+  //     border-radius: 2rem 0;
+  //   }
+}
+
+.project {
+  border-radius: 2rem 0;
+  padding-bottom: 0.5rem;
+}
+
+.siteCaption {
+  color: var(--color-primary-font);
+  font-family: "Raleway", sans-serif;
+}
+
+.siteSummary {
+  color: var(--color-primary-font);
+  font-family: "Raleway", sans-serif;
+}
+
+.carouselWrapper {
+  margin-top: 20%;
+}

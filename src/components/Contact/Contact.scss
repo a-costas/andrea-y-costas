@@ -1,0 +1,42 @@
+.contact {
+  //   background: linear-gradient(rgba(0, 0, 0, 60%), rgba(0, 0, 0, 60%)),
+  //     url("../../assets/images/mobile/clay-banks-gotg-unsplash.jpg");
+  background: linear-gradient(
+      180deg,
+      rgb(0, 0, 0) 0%,
+      rgba(255, 255, 255, 0) 20%
+    ),
+    linear-gradient(rgba(0, 0, 0, 60%), rgba(0, 0, 0, 30%)),
+    linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 30%),
+    url("../../assets/images/mobile/colin-lloyd-sand-dunes-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  height: 100vh;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.contactIcons {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  //   grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.contactIcon {
+  height: 3.5rem;
+  width: auto;
+}
+
+footer {
+  color: var(--color-primary-font);
+  font-family: "Raleway", sans-serif;
+  margin-top: auto;
+  align-self: center;
+  //   justify-: flex-end;
+}

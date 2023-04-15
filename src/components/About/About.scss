@@ -1,0 +1,47 @@
+.about {
+  background-color: var(--color-secondary-background);
+  padding: 2rem;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageContainer {
+  border-radius: 50% 0;
+  overflow: hidden;
+}
+
+.textContent {
+  border: 2px solid var(--color-primary-font);
+  padding: 2rem;
+  margin-top: 3rem;
+  border-radius: 0 4rem;
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.greeting {
+  color: var(--color-primary-font);
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.blurb {
+  color: var(--color-primary-font);
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+@media (min-width: 670px) {
+  .about {
+    padding: 4rem;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}

@@ -1,0 +1,156 @@
+.wrapper {
+  // background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 30%),
+  //   url("../../assets/images/mobile/madison-kuhn-maroonbells-unsplash.jpg");
+  // background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 30%),
+  //   url("../../assets/images/mobile/simon-goetz-maroonbells-unsplash.jpg");
+  background: linear-gradient(
+      180deg,
+      rgb(0, 0, 0) 0%,
+      rgba(255, 255, 255, 0) 20%
+    ),
+    linear-gradient(rgba(0, 0, 0, 10%), rgba(0, 0, 0, 10%)),
+    linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 30%),
+    url("../../assets/images/mobile/simon-goetz-maroonbells-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.headerBar {
+  opacity: 0;
+  animation: fadeIn 3s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  display: flex;
+  flex-direction: row;
+}
+
+.initials {
+  font-family: "Cinzel Decorative";
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+  color: var(--color-primary-font);
+  //   z-index: 2;
+}
+
+.right {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  inset: 0;
+}
+
+.hamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ham-bar-gap);
+  width: 100%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.hamburgerMenu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburgerMenu::before,
+.hamburgerMenu::after,
+.hamburgerMenu input {
+  content: "";
+  width: var(--ham-bar-width);
+  height: var(--ham-bar-height);
+  background-color: var(--color-primary-font);
+  transform-origin: right center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing);
+}
+
+.hamburgerMenu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+.hamburgerMenu:has(input:checked)::before {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--ham-bar-height) / -2);
+}
+
+.hamburgerMenu:has(input:checked)::after {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--ham-bar-height) / 2);
+}
+
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+  border: 1px solid var(--color-secondary-background);
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: hsla(0, 0%, 0%, 75%);
+  padding: 2.5rem 1.5rem 0;
+  transition: translate var(--animation-timing);
+  translate: 100%;
+  //   z-index: 2;
+}
+
+.hamburgerMenu:has(input:checked) + .sidebar {
+  translate: 0;
+}
+
+.navList {
+  margin-top: 50%;
+}
+
+@media (min-width: 670px) {
+  .wrapper {
+    background: linear-gradient(rgba(0, 0, 0, 10%), rgba(0, 0, 0, 10%)),
+      linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 30%),
+      url("../../assets/images/desktop/mike-scheid-maroonbells-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+  }
+
+  .headerBar {
+    margin: 1rem;
+  }
+
+  .hamburgerMenu {
+    display: none;
+  }
+
+  .initials {
+    font-size: 3.5rem;
+  }
+}
