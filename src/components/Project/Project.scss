@@ -2,6 +2,7 @@
   background-color: var(--color-card-background);
   color: var(--color-primary-font);
   font-family: "Raleway", sans-serif;
+  text-decoration: none;
 
   ul {
     margin: 0;
@@ -16,6 +17,12 @@
     }
   }
   border-radius: 2rem 0;
+
+  transition: transform 0.5s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .projectImage {

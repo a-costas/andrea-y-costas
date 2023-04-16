@@ -2,9 +2,14 @@ import React from "react";
 
 import "./Project.scss";
 
-function Project({ image, title, children, technologies }) {
+function Project({ image, title, children, technologies, url }) {
   return (
-    <div className="projectCard">
+    <a
+      className="projectCard"
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <img className="projectImage" src={image} alt={title} />
       <div className="cardText">
         <h3 className="cardTitle">{title}</h3>
@@ -15,7 +20,7 @@ function Project({ image, title, children, technologies }) {
           ))}
         </ul>
       </div>
-    </div>
+    </a>
   );
 }
 

@@ -6,7 +6,7 @@ import profileImg from "../../assets/images/mobile/Andrea profile.jpeg";
 
 function About() {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <h2 className="title">About me</h2>
       <div className="content">
         <div className="imageContainer">

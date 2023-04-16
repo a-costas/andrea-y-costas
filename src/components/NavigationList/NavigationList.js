@@ -1,29 +1,31 @@
 import React from "react";
 
+import { Link } from "react-scroll";
+
 import "./NavigationList.scss";
 
 function NavigationList() {
   return (
     <ul className="navigationList">
-      <li>
-        <a className="link" href="#About">
+      <li className="link">
+        <Link to="about" spy={true} smooth={true} offset={0} duration={500}>
           About
-        </a>
+        </Link>
       </li>
-      <li>
-        <a className="link" href="#Skills">
+      <li className="link">
+        <Link to="skills" spy={true} smooth={true} offset={0} duration={500}>
           Skills
-        </a>
+        </Link>
       </li>
-      <li>
-        <a className="link" href="#Projects">
+      <li className="link">
+        <Link to="projects" spy={true} smooth={true} offset={0} duration={500}>
           Projects
-        </a>
+        </Link>
       </li>
-      <li>
-        <a className="link" href="#Contact">
+      <li className="link">
+        <Link to="contact" spy={true} smooth={true} offset={0} duration={500}>
           Contact
-        </a>
+        </Link>
       </li>
     </ul>
   );

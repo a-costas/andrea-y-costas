@@ -13,38 +13,40 @@
   font-size: 1.5rem;
   line-height: 1.5625rem;
   text-decoration: none;
+  cursor: pointer;
 }
 
 @media (min-width: 670px) {
   .navigationList {
     flex-direction: row;
+    gap: 2.5rem;
   }
 
   .link {
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: 2.5rem;
+    font-weight: 500;
     line-height: 1.5;
     text-transform: none;
     position: relative;
     text-decoration: none;
     display: inline-block;
-  }
 
-  .link::after {
-    content: "";
-    position: absolute;
-    width: 1.5rem;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: -0.5rem;
-    left: 25%;
-    background-color: white;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 4px;
+      bottom: -0.5rem;
+      left: 0%;
+      background-color: white;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
 
-  .link:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
   }
 }

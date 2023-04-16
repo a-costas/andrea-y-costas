@@ -16,7 +16,7 @@ import javaIcon from "../../assets/icons/java_icon.png";
 function Skills() {
   //Could put mountain backdrop behind this with dark filter
   return (
-    <section className="skills">
+    <section className="skills" id="skills">
       <h2 className="title">Skills</h2>
       <div className="icons">
         <img className="icon" src={htmlIcon} alt="HTML5" />
