@@ -4,7 +4,7 @@ import "./Intro.scss";
 
 function Intro() {
   //hook?
-  const job = "<Frontend Software Engineer />";
+  const job = "Frontend Software Engineer";
   const [jobText, setJobText] = useState("");
   const [jobIndex, setJobIndex] = useState(0);
 
@@ -22,9 +22,7 @@ function Intro() {
 
   return (
     <div className="headerContent">
-      {/* <h1 className="hello">Hi there</h1> */}
       <h1 className="name">Andrea Y Costas</h1>
-      {/* <h2 className="job">&lt;Frontend Software Engineer /&gt;</h2> */}
       <h2 className="job">{jobText}</h2>
     </div>
   );

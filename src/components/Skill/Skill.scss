@@ -1,0 +1,16 @@
+.icon {
+  display: flex;
+  justify-self: center;
+}
+
+@media (min-width: 670px) {
+  .icon {
+    height: 9rem;
+    transition: transform 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.25);
+    }
+  }
+}

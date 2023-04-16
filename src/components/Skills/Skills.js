@@ -12,6 +12,7 @@ import graphqlIcon from "../../assets/icons/graphql_icon.png";
 import gitIcon from "../../assets/icons/git_icon.png";
 import pythonIcon from "../../assets/icons/python_icon.png";
 import javaIcon from "../../assets/icons/java_icon.png";
+import Skill from "../Skill/Skill";
 
 function Skills() {
   //Could put mountain backdrop behind this with dark filter
@@ -19,17 +20,17 @@ function Skills() {
     <section className="skills" id="skills">
       <h2 className="title">Skills</h2>
       <div className="icons">
-        <img className="icon" src={htmlIcon} alt="HTML5" />
-        <img className="icon" src={cssIcon} alt="CSS3" />
-        <img className="icon" src={reactIcon} alt="React" />
-        <img className="icon" src={sassIcon} alt="Sass" />
-        <img className="icon" src={nodeIcon} alt="Node JS" />
-        <img className="icon" src={jsIcon} alt="JavaScript" />
-        <img className="icon" src={tsIcon} alt="TypeScript" />
-        <img className="icon" src={graphqlIcon} alt="GraphQL" />
-        <img className="icon" src={gitIcon} alt="Git" />
-        <img className="icon" src={pythonIcon} alt="Python" />
-        <img className="icon" src={javaIcon} alt="Java" />
+        <Skill icon={htmlIcon} name="HTML5" />
+        <Skill icon={cssIcon} name="CSS3" />
+        <Skill icon={reactIcon} name="React" />
+        <Skill icon={sassIcon} name="Sass" />
+        <Skill icon={nodeIcon} name="Node JS" />
+        <Skill icon={jsIcon} name="JavaScript" />
+        <Skill icon={tsIcon} name="TypeScript" />
+        <Skill icon={graphqlIcon} name="GraphQL" />
+        <Skill icon={gitIcon} name="Git" />
+        <Skill icon={pythonIcon} name="Python" />
+        <Skill icon={javaIcon} name="Java" />
       </div>
     </section>
   );

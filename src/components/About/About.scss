@@ -7,10 +7,6 @@
   font-family: "Raleway", sans-serif;
   color: var(--color-primary-font);
 
-  // .title {
-  //   margin-bottom: 2rem;
-  // }
-
   .content {
     display: flex;
     flex-direction: column;
@@ -50,14 +46,6 @@
     gap: 2rem;
     padding-top: 6rem;
     padding-bottom: 6rem;
-    // height: 100vh;
-
-    // font-family: "Raleway", sans-serif;
-    // color: var(--color-primary-font);
-
-    // .title {
-    //   margin-bottom: 2rem;
-    // }
 
     .content {
       display: flex;
@@ -72,6 +60,14 @@
     // &:hover {
     //   box-shadow: 0 0 20px 20px white;
     // }
+  }
+
+  .greeting {
+    font-size: 3rem;
+  }
+
+  .blurb {
+    font-size: 2rem;
   }
 
   .textContent {
