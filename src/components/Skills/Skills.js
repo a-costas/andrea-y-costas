@@ -15,7 +15,6 @@ import javaIcon from "../../assets/icons/java_icon.png";
 import Skill from "../Skill/Skill";
 
 function Skills() {
-  //Could put mountain backdrop behind this with dark filter
   return (
     <section className="skills" id="skills">
       <h2 className="title">Skills</h2>
@@ -24,13 +23,13 @@ function Skills() {
         <Skill icon={cssIcon} name="CSS3" />
         <Skill icon={reactIcon} name="React" />
         <Skill icon={sassIcon} name="Sass" />
-        <Skill icon={nodeIcon} name="Node JS" />
         <Skill icon={jsIcon} name="JavaScript" />
         <Skill icon={tsIcon} name="TypeScript" />
         <Skill icon={graphqlIcon} name="GraphQL" />
         <Skill icon={gitIcon} name="Git" />
         <Skill icon={pythonIcon} name="Python" />
         <Skill icon={javaIcon} name="Java" />
+        <Skill icon={nodeIcon} name="Node JS" />
       </div>
     </section>
   );

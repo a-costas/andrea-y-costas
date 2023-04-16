@@ -1,29 +1,34 @@
 import React, { useState, useEffect } from "react";
+import Typewriter from "typewriter-effect";
 
 import "./Intro.scss";
 
 function Intro() {
-  //hook?
-  const job = "Frontend Software Engineer";
-  const [jobText, setJobText] = useState("");
-  const [jobIndex, setJobIndex] = useState(0);
-
-  useEffect(() => {
-    if (jobIndex === 0) {
-      setTimeout(() => {}, 500);
-    }
-    if (jobIndex < job.length) {
-      setTimeout(() => {
-        setJobText(jobText + job[jobIndex]);
-        setJobIndex(jobIndex + 1);
-      }, 150);
-    }
-  }, [jobIndex]);
-
   return (
     <div className="headerContent">
       <h1 className="name">Andrea Y Costas</h1>
-      <h2 className="job">{jobText}</h2>
+      <h2 className="job">
+        <Typewriter
+          onInit={(typewriter) => {
+            typewriter
+              .pauseFor(2000)
+              .typeString("Frontend Software Engineer")
+              .pauseFor(10000)
+              .deleteAll()
+              .typeString("Are you going to scroll down or what?")
+              .pauseFor(4000)
+              .deleteAll()
+              .typeString("There's more stuff down there, go look!")
+              .pauseFor(4000)
+              .deleteAll()
+              .typeString("Frontend Software Engineer")
+              .start();
+          }}
+          options={{
+            autoStart: true,
+          }}
+        />
+      </h2>
     </div>
   );
 }
