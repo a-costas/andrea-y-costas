@@ -9,8 +9,11 @@ function About() {
     <section className="about" id="about">
       <h2 className="title">About me</h2>
       <div className="content">
-        <div className="imageContainer">
-          <img src={profileImg} alt="Profile" />
+        <div className="left">
+          <div className="imageContainer">
+            <img src={profileImg} alt="Profile" />
+          </div>
+          <button className="resume">Download Resume</button>
         </div>
         <div className="textContent">
           <h2 className="greeting">Hi there!</h2>

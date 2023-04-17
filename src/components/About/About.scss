@@ -57,9 +57,21 @@
   .imageContainer {
     border-radius: 50% 0;
 
-    // &:hover {
-    //   box-shadow: 0 0 20px 20px white;
-    // }
+    &:hover {
+      box-shadow: 0 0 20px 20px white;
+    }
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .resume {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border-radius: 0 1rem;
   }
 
   .greeting {
