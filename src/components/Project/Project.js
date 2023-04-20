@@ -2,14 +2,12 @@ import React from "react";
 
 import "./Project.scss";
 
-function Project({ image, title, children, technologies, url }) {
+import githubIcon from "../../assets/icons/github-mark-white.png";
+import internetIcon from "../../assets/icons/internet.png";
+
+function Project({ image, title, children, technologies, siteUrl, repoUrl }) {
   return (
-    <a
-      className="projectCard"
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <div className="projectCard">
       <img className="projectImage" src={image} alt={title} />
       <div className="cardText">
         <h3 className="cardTitle">{title}</h3>
@@ -19,8 +17,32 @@ function Project({ image, title, children, technologies, url }) {
             <li key={index}>#{tech}</li>
           ))}
         </ul>
+        <div className="buttons">
+          <button className="rowBtn">
+            <img className="buttonIcon" src={internetIcon} alt="Visit site" />
+            <a
+              className="siteBtn"
+              href={siteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit Site
+            </a>
+          </button>
+          <button className="rowBtn">
+            <img className="buttonIcon" src={githubIcon} alt="Github" />
+            <a
+              className="siteBtn"
+              href={repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </a>
+          </button>
+        </div>
       </div>
-    </a>
+    </div>
   );
 }
 

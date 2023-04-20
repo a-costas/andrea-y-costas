@@ -41,6 +41,57 @@
   padding-bottom: 0.5rem;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+
+  a {
+    color: var(--color-primary-font);
+    text-decoration: none;
+  }
+
+  button {
+    border: none;
+    padding: 0.5rem 1rem;
+
+    background-color: var(--color-secondary-background);
+    flex-grow: 1;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color-card-button-hover);
+    }
+
+    &:first-child {
+      border-radius: 1rem 0 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 1rem 0;
+    }
+
+    &:not(:last-child) {
+      border-right: solid 1px var(--color-card-background);
+    }
+  }
+}
+
+.apiLink {
+  color: var(--color-primary-font);
+  margin-left: 0.5rem;
+}
+
+.rowBtn {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.buttonIcon {
+  height: 1.5rem;
+}
+
 @media (min-width: 670px) {
   .projectCard {
     background-color: var(--color-card-background);
